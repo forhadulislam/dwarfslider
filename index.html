@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title> Dwarf Slider </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link href="dist/dwarf-slider.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+<body>
+
+    <div class="col-md-12">
+        <ul class="col-md-8 col-md-offset-2 seSlider slider1">
+            <li><img src="http://www.wallpapereast.com/static/images/HD-Wallpapers1_QlwttNW.jpeg" class="img-responsive" /></li>
+            <li><img src="http://www.ghulmil.com/wp-content/uploads/rainy-weather-hd-wallpaper.jpg" class="img-responsive" /></li>
+            <li><img src="http://wallpapercave.com/wp/waxcmJJ.png" class="img-responsive" /></li>
+            <li><img src="http://hdwallpaperswide.co/wp-content/uploads/2016/01/City-Bridge-Wallpapers.jpg" class="img-responsive" /></li>
+            <li><img src="http://androidwallpape.rs/content/02-wallpapers/78-street/wallpaper-2594020.jpg" class="img-responsive" /></li>
+        </ul>
+    </div>
+
+
+    <div class="col-sm-12 col-md-8 col-md-offset-2 clearfix text-center">
+
+            <h2>Another Slider</h2>
+
+            <ul class="col-md-8 col-md-offset-2 seSlider mylistslide">
+                <li><h3>1</h3></li>
+                <li><h3>2</h3></li>
+                <li><h3>3</h3></li>
+                <li><h3>4</h3></li>
+                <li><h3>5</h3></li>
+            </ul>
+
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+<script src="https://rawgit.com/julianshapiro/velocity/master/velocity.min.js"></script>
+<script src="dist/dwarf-slider.js"></script>
+<script>
+
+    window.onload = function(){
+
+        // Calling slider on window on load
+        $(".slider1").DwarfSlider({ interval: 5000, progressBar: true, pagination: true });
+        $(".mylistslide").DwarfSlider({ interval: 8000, progressBar: true, pagination: true });
+
+    }
+
+
+    </script>
+</body>
+</html>

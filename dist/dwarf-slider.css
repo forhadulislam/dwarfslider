@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower|Lobster|Josefin+Sans:400,700,600,300,100|Pacifico);
+body{
+    padding:0;
+    margin:0;
+    min-height: 3000px;
+}
+ul{
+    padding:0;
+}
+.dwarf-slider{
+    overflow: hidden;
+}
+ul.dwarf-slider {
+    /* styled by JS to match the added width and height of all <li>’s */
+    position: relative;
+    transition: 0.5s left;
+    list-style: none;
+    padding: 0;
+}
+ul.dwarf-slider  li {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+}
+ul.dwarf-slider  li:first-child {
+    z-index: 10;
+}
+ul.dwarf-slider .dwarf-slider-pagination{
+    position: absolute;
+    bottom: 5%;
+    left: 45%;
+    z-index: 999;
+}
+ul.dwarf-slider .dwarf-slider-pagination .page-nav{
+    padding: 5px;
+    display: inline-block;
+    margin-left: 12px;
+    background: #fff;
+    border-radius: 10px;
+}
+ul.dwarf-slider .dwarf-slider-pagination .page-nav.active{
+    background: #525252;
+}
+ul.dwarf-slider .slide-left-nav, ul.dwarf-slider .slide-right-nav{
+    z-index: 999;
+    top: 40%;
+    color: #fff;
+    font-size: 50px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+}
+ul.dwarf-slider .slide-left-nav{
+    left: 20px;
+}
+ul.dwarf-slider .slide-right-nav{
+    right: 20px;
+}
+ul.dwarf-slider .slide-left-nav:after {
+    content: '\2190';
+}
+ul.dwarf-slider .slide-right-nav:after{
+    content: '\2192';
+}
+ul.dwarf-slider .slide-right-nav:hover, ul.dwarf-slider .slide-left-nav:hover{
+    color: rgb(239, 0, 0);
+    cursor: pointer;
+}
+ul.dwarf-slider .slider-progress{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 99;
+}
+ul.dwarf-slider .slider-progress .status{
+    height: 6px;
+    width: 0%;
+    background: greenyellow;
+}
+
+ul.dwarf-slider .loading{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: #0f0;
+    animation: DwarfSliderLoaderAnimation 1s infinite;
+    animation-fill-mode: both;
+}
+@keyframes DwarfSliderLoaderAnimation{
+    0%{
+        transform: scale(0,0);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+
+
+.mylistslide{
+
+}
+ul.mylistslide li{
+    background: #ddd;
+    min-height: 200px;
+}
